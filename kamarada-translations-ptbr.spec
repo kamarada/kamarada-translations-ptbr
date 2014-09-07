@@ -31,6 +31,9 @@ BuildRequires:  digikam-lang
 BuildRequires:  k3b-lang
 BuildRequires:  kamoso-lang
 BuildRequires:  kipi-plugins-lang
+BuildRequires:  ktorrent-lang
+BuildRequires:  libpurple-lang
+BuildRequires:  libpurple-plugin-skype-lang
 BuildRequires:  MozillaFirefox-translations-common
 BuildRequires:  skanlite-lang
 BuildRequires:  vlc-noX-lang
@@ -40,6 +43,9 @@ Conflicts:      otherproviders(digikam-lang)
 Conflicts:      otherproviders(k3b-lang)
 Conflicts:      otherproviders(kamoso-lang)
 Conflicts:      otherproviders(kipi-plugins-lang)
+Conflicts:      otherproviders(ktorrent-lang)
+Conflicts:      otherproviders(libpurple-lang)
+Conflicts:      otherproviders(libpurple-plugin-skype-lang)
 Conflicts:      otherproviders(MozillaFirefox-translations-common)
 Conflicts:      otherproviders(skanlite-lang)
 Conflicts:      otherproviders(vlc-noX-lang)
@@ -49,6 +55,9 @@ Provides:       digikam-lang
 Provides:       k3b-lang
 Provides:       kamoso-lang
 Provides:       kipi-plugins-lang
+Provides:       ktorrent-lang
+Provides:       libpurple-lang
+Provides:       libpurple-plugin-skype-lang
 Provides:       MozillaFirefox-translations-common
 Provides:       skanlite-lang
 Provides:       vlc-noX-lang
@@ -118,6 +127,12 @@ files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_shwup
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_smug.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_timeadjust.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugins.mo"
+# From ktorrent-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/ktorrent.mo"
+# From libpurple-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/pidgin.mo"
+# From libpurple-plugin-skype-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skype4pidgin.mo"
 # From MozillaFirefox-translations-common
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/"
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/"
