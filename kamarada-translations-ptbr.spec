@@ -27,6 +27,8 @@ Url:            http://github.com/kamarada/kamarada-translations-ptbr
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  amarok-lang
+BuildRequires:  apper-lang
+BuildRequires:  bluedevil-lang
 BuildRequires:  digikam-lang
 BuildRequires:  k3b-lang
 BuildRequires:  kamoso-lang
@@ -37,8 +39,11 @@ BuildRequires:  libpurple-plugin-skype-lang
 BuildRequires:  MozillaFirefox-translations-common
 BuildRequires:  skanlite-lang
 BuildRequires:  vlc-noX-lang
+BuildRequires:  yakuake-lang
 
 Conflicts:      otherproviders(amarok-lang)
+Conflicts:      otherproviders(apper-lang)
+Conflicts:      otherproviders(bluedevil-lang)
 Conflicts:      otherproviders(digikam-lang)
 Conflicts:      otherproviders(k3b-lang)
 Conflicts:      otherproviders(kamoso-lang)
@@ -49,8 +54,11 @@ Conflicts:      otherproviders(libpurple-plugin-skype-lang)
 Conflicts:      otherproviders(MozillaFirefox-translations-common)
 Conflicts:      otherproviders(skanlite-lang)
 Conflicts:      otherproviders(vlc-noX-lang)
+Conflicts:      otherproviders(yakuake-lang)
 
 Provides:       amarok-lang
+Provides:       apper-lang
+Provides:       bluedevil-lang
 Provides:       digikam-lang
 Provides:       k3b-lang
 Provides:       kamoso-lang
@@ -61,6 +69,7 @@ Provides:       libpurple-plugin-skype-lang
 Provides:       MozillaFirefox-translations-common
 Provides:       skanlite-lang
 Provides:       vlc-noX-lang
+Provides:       yakuake-lang
 
 Requires:       bundle-lang-common-pt
 Requires:       kde4-l10n-pt_BR
@@ -89,6 +98,11 @@ files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo"
+# From apper-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/apper.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/plasma_package_updater.mo"
+# From bluedevil-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/bluedevil.mo"
 # From digikam-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/digikam.mo"
 # From k3b-lang
@@ -141,6 +155,8 @@ files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/skanlite"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skanlite.mo"
 # From vlc-noX-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/vlc.mo"
+# From yakuake-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/yakuake.mo"
 
 
 echo "%defattr(-,root,root)" > files.kamarada-translations-ptbr
