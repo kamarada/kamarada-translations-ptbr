@@ -27,21 +27,30 @@ Url:            http://github.com/kamarada/kamarada-translations-ptbr
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  amarok-lang
+BuildRequires:  digikam-lang
 BuildRequires:  k3b-lang
 BuildRequires:  kamoso-lang
+BuildRequires:  kipi-plugins-lang
 BuildRequires:  MozillaFirefox-translations-common
+BuildRequires:  skanlite-lang
 BuildRequires:  vlc-noX-lang
 
 Conflicts:      otherproviders(amarok-lang)
+Conflicts:      otherproviders(digikam-lang)
 Conflicts:      otherproviders(k3b-lang)
 Conflicts:      otherproviders(kamoso-lang)
+Conflicts:      otherproviders(kipi-plugins-lang)
 Conflicts:      otherproviders(MozillaFirefox-translations-common)
+Conflicts:      otherproviders(skanlite-lang)
 Conflicts:      otherproviders(vlc-noX-lang)
 
 Provides:       amarok-lang
+Provides:       digikam-lang
 Provides:       k3b-lang
 Provides:       kamoso-lang
+Provides:       kipi-plugins-lang
 Provides:       MozillaFirefox-translations-common
+Provides:       skanlite-lang
 Provides:       vlc-noX-lang
 
 Requires:       bundle-lang-common-pt
@@ -71,6 +80,8 @@ files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo"
+# From digikam-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/digikam.mo"
 # From k3b-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3b.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3bsetup.mo"
@@ -79,9 +90,40 @@ files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libk3b.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libk3bdevice.mo"
 # From kamoso-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kamoso.mo"
+# From kipi-plugins-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_acquireimages.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_advancedslideshow.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_batchprocessimages.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_calendar.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_dngconverter.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_expoblending.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_facebook.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_flashexport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_flickrexport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_galleryexport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_gpssync.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_htmlexport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_imageviewer.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_ipodexport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_jpeglossless.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_kioexportimport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_metadataedit.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_picasawebexport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_piwigoexport.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_printimages.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_rawconverter.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_removeredeyes.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_sendimages.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_shwup.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_smug.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_timeadjust.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugins.mo"
 # From MozillaFirefox-translations-common
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/"
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/"
+# From skanlite-lang
+files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/skanlite"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skanlite.mo"
 # From vlc-noX-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/vlc.mo"
 
