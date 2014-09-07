@@ -26,11 +26,23 @@ Source0:        LICENSE
 Url:            http://github.com/kamarada/kamarada-translations-ptbr
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
+BuildRequires:  amarok-lang
+BuildRequires:  k3b-lang
+BuildRequires:  kamoso-lang
 BuildRequires:  MozillaFirefox-translations-common
+BuildRequires:  vlc-noX-lang
 
+Conflicts:      otherproviders(amarok-lang)
+Conflicts:      otherproviders(k3b-lang)
+Conflicts:      otherproviders(kamoso-lang)
 Conflicts:      otherproviders(MozillaFirefox-translations-common)
+Conflicts:      otherproviders(vlc-noX-lang)
 
+Provides:       amarok-lang
+Provides:       k3b-lang
+Provides:       kamoso-lang
 Provides:       MozillaFirefox-translations-common
+Provides:       vlc-noX-lang
 
 Requires:       bundle-lang-common-pt
 Requires:       kde4-l10n-pt_BR
@@ -53,8 +65,26 @@ cp -a %{SOURCE0} COPYING
 
 %install
 files_to_add=""
+# From amarok-lang
+files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/amarok/"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo"
+# From k3b-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3b.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3bsetup.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kio_videodvd.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libk3b.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libk3bdevice.mo"
+# From kamoso-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kamoso.mo"
+# From MozillaFirefox-translations-common
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/"
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/"
+# From vlc-noX-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/vlc.mo"
+
 
 echo "%defattr(-,root,root)" > files.kamarada-translations-ptbr
 echo "%doc COPYING" >> files.kamarada-translations-ptbr
