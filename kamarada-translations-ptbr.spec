@@ -72,9 +72,11 @@ Provides:       vlc-noX-lang
 Provides:       yakuake-lang
 
 Requires:       bundle-lang-common-pt
+Requires:       bundle-lang-kde-pt
 Requires:       kde4-l10n-pt_BR
 Requires:       kde4-l10n-pt_BR-data
 Requires:       libreoffice-l10n-pt-BR
+Requires:       libreoffice-thesaurus-pt
 Requires:       translation-update-pt_BR
 Requires:       yast2-trans-pt_BR
 
@@ -149,7 +151,6 @@ files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/pidgin.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skype4pidgin.mo"
 # From MozillaFirefox-translations-common
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/"
-files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-PT@firefox.mozilla.org/"
 # From skanlite-lang
 files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/skanlite"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skanlite.mo"
