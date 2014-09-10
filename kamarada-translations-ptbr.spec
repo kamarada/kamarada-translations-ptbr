@@ -27,9 +27,12 @@ Url:            http://github.com/kamarada/kamarada-translations-ptbr
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  amarok-lang
+BuildRequires:  apparmor-utils-lang
 BuildRequires:  apper-lang
 BuildRequires:  bluedevil-lang
+BuildRequires:  cups-pk-helper-lang
 BuildRequires:  digikam-lang
+# BuildRequires:  glibc-locale TODO ?
 BuildRequires:  k3b-lang
 BuildRequires:  kamoso-lang
 BuildRequires:  kipi-plugins-lang
@@ -42,9 +45,12 @@ BuildRequires:  vlc-noX-lang
 BuildRequires:  yakuake-lang
 
 Conflicts:      otherproviders(amarok-lang)
+Conflicts:      otherproviders(apparmor-utils-lang)
 Conflicts:      otherproviders(apper-lang)
 Conflicts:      otherproviders(bluedevil-lang)
+Conflicts:      otherproviders(cups-pk-helper-lang)
 Conflicts:      otherproviders(digikam-lang)
+# Conflicts:      otherproviders(glibc-locale) TODO ?
 Conflicts:      otherproviders(k3b-lang)
 Conflicts:      otherproviders(kamoso-lang)
 Conflicts:      otherproviders(kipi-plugins-lang)
@@ -57,9 +63,12 @@ Conflicts:      otherproviders(vlc-noX-lang)
 Conflicts:      otherproviders(yakuake-lang)
 
 Provides:       amarok-lang
+Provides:       apparmor-utils-lang
 Provides:       apper-lang
 Provides:       bluedevil-lang
+Provides:       cups-pk-helper-lang
 Provides:       digikam-lang
+# Provides:       glibc-locale TODO ?
 Provides:       k3b-lang
 Provides:       kamoso-lang
 Provides:       kipi-plugins-lang
@@ -100,13 +109,19 @@ files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo"
+# From  apparmor-utils-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/apparmor-utils.mo"
 # From apper-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/apper.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/plasma_package_updater.mo"
 # From bluedevil-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/bluedevil.mo"
+# From  cups-pk-helper-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/cups-pk-helper.mo"
 # From digikam-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/digikam.mo"
+# From  glibc-locale TODO ?
+
 # From k3b-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3b.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3bsetup.mo"
