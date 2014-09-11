@@ -40,9 +40,21 @@ BuildRequires:  ktorrent-lang
 BuildRequires:  libpurple-lang
 BuildRequires:  libpurple-plugin-skype-lang
 BuildRequires:  MozillaFirefox-translations-common
+BuildRequires:  NetworkManager-kde4-libs-lang
+BuildRequires:  NetworkManager-lang
+BuildRequires:  NetworkManager-openvpn-lang
+BuildRequires:  NetworkManager-pptp-lang
+BuildRequires:  NetworkManager-vpnc-lang
+# BuildRequires:  plasma-nm-lang TODO ?
 BuildRequires:  skanlite-lang
 BuildRequires:  vlc-noX-lang
 BuildRequires:  yakuake-lang
+
+BuildRequires:  bluez
+BuildRequires:  libswscale2
+BuildRequires:  NetworkManager-openvpn-kde4
+BuildRequires:  NetworkManager-pptp-kde4
+BuildRequires:  NetworkManager-vpnc-kde4
 
 Conflicts:      otherproviders(amarok-lang)
 Conflicts:      otherproviders(apparmor-utils-lang)
@@ -58,6 +70,11 @@ Conflicts:      otherproviders(ktorrent-lang)
 Conflicts:      otherproviders(libpurple-lang)
 Conflicts:      otherproviders(libpurple-plugin-skype-lang)
 Conflicts:      otherproviders(MozillaFirefox-translations-common)
+Conflicts:      otherproviders(NetworkManager-kde4-libs-lang)
+Conflicts:      otherproviders(NetworkManager-lang)
+Conflicts:      otherproviders(NetworkManager-openvpn-lang)
+Conflicts:      otherproviders(NetworkManager-pptp-lang)
+Conflicts:      otherproviders(NetworkManager-vpnc-lang)
 Conflicts:      otherproviders(skanlite-lang)
 Conflicts:      otherproviders(vlc-noX-lang)
 Conflicts:      otherproviders(yakuake-lang)
@@ -76,6 +93,11 @@ Provides:       ktorrent-lang
 Provides:       libpurple-lang
 Provides:       libpurple-plugin-skype-lang
 Provides:       MozillaFirefox-translations-common
+Provides:       NetworkManager-kde4-libs-lang
+Provides:       NetworkManager-lang
+Provides:       NetworkManager-openvpn-lang
+Provides:       NetworkManager-pptp-lang
+Provides:       NetworkManager-vpnc-lang
 Provides:       skanlite-lang
 Provides:       vlc-noX-lang
 Provides:       yakuake-lang
@@ -106,14 +128,14 @@ files_to_add=""
 # From amarok-lang
 files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/amarok/"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo"
+# files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo"
 # From  apparmor-utils-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/apparmor-utils.mo"
 # From apper-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/apper.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/plasma_package_updater.mo"
+# files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/plasma_package_updater.mo"
 # From bluedevil-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/bluedevil.mo"
 # From  cups-pk-helper-lang
@@ -166,8 +188,21 @@ files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/pidgin.mo"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skype4pidgin.mo"
 # From MozillaFirefox-translations-common
 files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/"
+# From NetworkManager-kde4-libs-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/knetworkmanager.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libknetworkmanager.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/plasma_applet_networkmanagement.mo"
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/solidcontrolnm09.mo"
+# From NetworkManager-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager.mo"
+# From NetworkManager-openvpn-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager-openvpn.mo"
+# From NetworkManager-pptp-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager-pptp.mo"
+# From NetworkManager-vpnc-lang
+files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager-vpnc.mo"
 # From skanlite-lang
-files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/skanlite"
+# files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/skanlite"
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skanlite.mo"
 # From vlc-noX-lang
 files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/vlc.mo"
