@@ -16,10 +16,13 @@
 #
 
 
+%define language pt_BR
+%define version 13.1
+
 Name:           kamarada-translations-ptbr
-Version:        13.1
+Version:        %{version}
 Release:        1
-Summary:        Brazilian Portuguese translations to Kamarada
+Summary:        Brazilian Portuguese translations to Kamarada %{version}
 License:        GPL-2.0+
 Group:          System/Localization
 Source0:        LICENSE
@@ -62,7 +65,6 @@ Conflicts:      otherproviders(apper-lang)
 Conflicts:      otherproviders(bluedevil-lang)
 Conflicts:      otherproviders(cups-pk-helper-lang)
 Conflicts:      otherproviders(digikam-lang)
-# Conflicts:      otherproviders(glibc-locale) TODO ?
 Conflicts:      otherproviders(k3b-lang)
 Conflicts:      otherproviders(kamoso-lang)
 Conflicts:      otherproviders(kipi-plugins-lang)
@@ -85,7 +87,6 @@ Provides:       apper-lang
 Provides:       bluedevil-lang
 Provides:       cups-pk-helper-lang
 Provides:       digikam-lang
-# Provides:       glibc-locale TODO ?
 Provides:       k3b-lang
 Provides:       kamoso-lang
 Provides:       kipi-plugins-lang
@@ -113,7 +114,7 @@ Requires:       yast2-trans-pt_BR
 
 
 %description
-Brazilian Portuguese translations to Kamarada
+Brazilian Portuguese translations to Kamarada %{version}
 
 
 %prep
@@ -124,96 +125,46 @@ cp -a %{SOURCE0} COPYING
 
 
 %install
-files_to_add=""
-# From amarok-lang
-files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/amarok/"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok.mo"
-# files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo"
-# From  apparmor-utils-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/apparmor-utils.mo"
-# From apper-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/apper.mo"
-# files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/plasma_package_updater.mo"
-# From bluedevil-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/bluedevil.mo"
-# From  cups-pk-helper-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/cups-pk-helper.mo"
-# From digikam-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/digikam.mo"
-# From  glibc-locale TODO ?
+# Search for translations in packages
+packages=""
+packages="$packages amarok-lang"
+packages="$packages apparmor-utils-lang"
+packages="$packages apper-lang"
+packages="$packages bluedevil-lang"
+packages="$packages cups-pk-helper-lang"
+packages="$packages digikam-lang"
+packages="$packages k3b-lang"
+packages="$packages kamoso-lang"
+packages="$packages kipi-plugins-lang"
+packages="$packages ktorrent-lang"
+packages="$packages libpurple-lang"
+packages="$packages libpurple-plugin-skype-lang"
+# packages="$packages MozillaFirefox-translations-common"
+packages="$packages NetworkManager-kde4-libs-lang"
+packages="$packages NetworkManager-lang"
+packages="$packages NetworkManager-openvpn-lang"
+packages="$packages NetworkManager-pptp-lang"
+packages="$packages NetworkManager-vpnc-lang"
+packages="$packages skanlite-lang"
+packages="$packages vlc-noX-lang"
+packages="$packages yakuake-lang"
 
-# From k3b-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3b.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/k3bsetup.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kio_videodvd.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libk3b.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libk3bdevice.mo"
-# From kamoso-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kamoso.mo"
-# From kipi-plugins-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_acquireimages.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_advancedslideshow.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_batchprocessimages.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_calendar.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_dngconverter.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_expoblending.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_facebook.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_flashexport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_flickrexport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_galleryexport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_gpssync.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_htmlexport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_imageviewer.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_ipodexport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_jpeglossless.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_kioexportimport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_metadataedit.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_picasawebexport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_piwigoexport.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_printimages.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_rawconverter.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_removeredeyes.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_sendimages.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_shwup.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_smug.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugin_timeadjust.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/kipiplugins.mo"
-# From ktorrent-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/ktorrent.mo"
-# From libpurple-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/pidgin.mo"
-# From libpurple-plugin-skype-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skype4pidgin.mo"
-# From MozillaFirefox-translations-common
-files_to_add="$files_to_add /usr/lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/"
-# From NetworkManager-kde4-libs-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/knetworkmanager.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/libknetworkmanager.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/plasma_applet_networkmanagement.mo"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/solidcontrolnm09.mo"
-# From NetworkManager-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager.mo"
-# From NetworkManager-openvpn-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager-openvpn.mo"
-# From NetworkManager-pptp-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager-pptp.mo"
-# From NetworkManager-vpnc-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/NetworkManager-vpnc.mo"
-# From skanlite-lang
-# files_to_add="$files_to_add /usr/share/doc/kde/HTML/pt_BR/skanlite"
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/skanlite.mo"
-# From vlc-noX-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/vlc.mo"
-# From yakuake-lang
-files_to_add="$files_to_add /usr/share/locale/pt_BR/LC_MESSAGES/yakuake.mo"
+echo "" > files_to_add
 
+for p in $packages; do
+  rpm -q --qf '[%{FILENAMES}\n]' $p | grep %{language} | while read file; do
+    echo "$file" >> files_to_add
+  done
+done
 
+# Files from MozillaFirefox-translations-common
+echo "/usr/lib/firefox/browser/extensions/langpack-pt-BR@firefox.mozilla.org/" >> files_to_add
+
+# Add files to package
 echo "%defattr(-,root,root)" > files.kamarada-translations-ptbr
 echo "%doc COPYING" >> files.kamarada-translations-ptbr
 
-for f in $files_to_add; do
+for f in `cat files_to_add`; do
   if ! test -L "$f" && test -d "$f"; then
     mkdir -p $RPM_BUILD_ROOT/$f
     cp -R "$f/" "$RPM_BUILD_ROOT/$f/../"
@@ -224,10 +175,12 @@ for f in $files_to_add; do
   echo "$f" >> files.kamarada-translations-ptbr
 done
 
+rm files_to_add
+
 
 %files -f files.kamarada-translations-ptbr
 
 
 %changelog
-* Wed Sep 03 2014 kamaradalinux@gmail.com
+* Fri Sep 12 2014 kamaradalinux@gmail.com
 - Initial draft
