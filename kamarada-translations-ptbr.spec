@@ -38,6 +38,7 @@ BuildRequires:  digikam-lang
 # BuildRequires:  glibc-locale TODO ?
 BuildRequires:  k3b-lang
 BuildRequires:  kamoso-lang
+BuildRequires:  kdebase4-openSUSE-lang
 BuildRequires:  kipi-plugins-lang
 BuildRequires:  ktorrent-lang
 BuildRequires:  libpurple-lang
@@ -67,6 +68,7 @@ Conflicts:      otherproviders(cups-pk-helper-lang)
 Conflicts:      otherproviders(digikam-lang)
 Conflicts:      otherproviders(k3b-lang)
 Conflicts:      otherproviders(kamoso-lang)
+Conflicts:      otherproviders(kdebase4-openSUSE-lang)
 Conflicts:      otherproviders(kipi-plugins-lang)
 Conflicts:      otherproviders(ktorrent-lang)
 Conflicts:      otherproviders(libpurple-lang)
@@ -89,6 +91,7 @@ Provides:       cups-pk-helper-lang
 Provides:       digikam-lang
 Provides:       k3b-lang
 Provides:       kamoso-lang
+Provides:       kdebase4-openSUSE-lang
 Provides:       kipi-plugins-lang
 Provides:       ktorrent-lang
 Provides:       libpurple-lang
@@ -135,6 +138,7 @@ packages="$packages cups-pk-helper-lang"
 packages="$packages digikam-lang"
 packages="$packages k3b-lang"
 packages="$packages kamoso-lang"
+packages="$packages kdebase4-openSUSE-lang"
 packages="$packages kipi-plugins-lang"
 packages="$packages ktorrent-lang"
 packages="$packages libpurple-lang"
