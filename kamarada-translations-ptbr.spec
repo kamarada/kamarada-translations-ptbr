@@ -45,7 +45,6 @@ BuildRequires:  libpurple-lang
 BuildRequires:  libpurple-plugin-skype-lang
 BuildRequires:  MozillaFirefox-translations-common
 BuildRequires:  NetworkManager-kde4-libs-lang
-BuildRequires:  NetworkManager-lang
 BuildRequires:  NetworkManager-openvpn-lang
 BuildRequires:  NetworkManager-pptp-lang
 BuildRequires:  NetworkManager-vpnc-lang
@@ -75,7 +74,6 @@ Conflicts:      otherproviders(libpurple-lang)
 Conflicts:      otherproviders(libpurple-plugin-skype-lang)
 Conflicts:      otherproviders(MozillaFirefox-translations-common)
 Conflicts:      otherproviders(NetworkManager-kde4-libs-lang)
-Conflicts:      otherproviders(NetworkManager-lang)
 Conflicts:      otherproviders(NetworkManager-openvpn-lang)
 Conflicts:      otherproviders(NetworkManager-pptp-lang)
 Conflicts:      otherproviders(NetworkManager-vpnc-lang)
@@ -98,7 +96,6 @@ Provides:       libpurple-lang
 Provides:       libpurple-plugin-skype-lang
 Provides:       MozillaFirefox-translations-common
 Provides:       NetworkManager-kde4-libs-lang
-Provides:       NetworkManager-lang
 Provides:       NetworkManager-openvpn-lang
 Provides:       NetworkManager-pptp-lang
 Provides:       NetworkManager-vpnc-lang
@@ -145,7 +142,6 @@ packages="$packages libpurple-lang"
 packages="$packages libpurple-plugin-skype-lang"
 # packages="$packages MozillaFirefox-translations-common"
 packages="$packages NetworkManager-kde4-libs-lang"
-packages="$packages NetworkManager-lang"
 packages="$packages NetworkManager-openvpn-lang"
 packages="$packages NetworkManager-pptp-lang"
 packages="$packages NetworkManager-vpnc-lang"
