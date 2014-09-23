@@ -30,7 +30,6 @@ Url:            http://github.com/kamarada/kamarada-translations-ptbr
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  apparmor-utils-lang
-BuildRequires:  apper-lang
 BuildRequires:  bluedevil-lang
 BuildRequires:  cups-pk-helper-lang
 # BuildRequires:  glibc-locale TODO ?
@@ -46,7 +45,6 @@ BuildRequires:  bluez
 BuildRequires:  libswscale2
 
 Conflicts:      otherproviders(apparmor-utils-lang)
-Conflicts:      otherproviders(apper-lang)
 Conflicts:      otherproviders(bluedevil-lang)
 Conflicts:      otherproviders(cups-pk-helper-lang)
 Conflicts:      otherproviders(kamoso-lang)
@@ -58,7 +56,6 @@ Conflicts:      otherproviders(vlc-noX-lang)
 Conflicts:      otherproviders(yakuake-lang)
 
 Provides:       apparmor-utils-lang
-Provides:       apper-lang
 Provides:       bluedevil-lang
 Provides:       cups-pk-helper-lang
 Provides:       kamoso-lang
@@ -94,7 +91,6 @@ cp -a %{SOURCE0} COPYING
 # Search for translations in packages
 packages=""
 packages="$packages apparmor-utils-lang"
-packages="$packages apper-lang"
 packages="$packages bluedevil-lang"
 packages="$packages cups-pk-helper-lang"
 packages="$packages kamoso-lang"
